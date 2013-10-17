@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <script src="test/lib/public/prototype.js" type="text/javascript" charset="utf-8"></script>
+  <script src="src/editable.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+  document.observe('dom:loaded', function(event) {
+    $$('.editable').each(function(elm){
+      new Editable(elm, {
+        editField: {'type': 'textarea'}
+      });
+    });
+
+    //Editable.setupAll();
+  });
+  </script>
+  <title>Better Editable</title>
+  <style type="text/css" media="screen">
+  .editable {
+    height: 200px;
+    width: 200px;
+    border: 1px solid #ccc;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="editable" id="test_1_blarg" rel="test">
+    <p>This should become editable.</p>
+  </div>
+
+</body>
+</html>
